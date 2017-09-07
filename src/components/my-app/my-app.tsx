@@ -11,14 +11,14 @@ export class MyApp {
         <h1>Welcome to Stencil Starter</h1>
       </div>,
       <nav class="page-nav">
-        <stencil-route-link url="/">Home</stencil-route-link>
-        <stencil-route-link url="/page-1">Page 1</stencil-route-link>
-        <stencil-route-link url="/page-2">Page 2</stencil-route-link>
+        <stencil-route-link router="#router" url="/">Home</stencil-route-link>
+        <stencil-route-link router="#router" url="/about">About Us</stencil-route-link>
+        <stencil-route-link router="#router" url="/contact">Contact</stencil-route-link>
       </nav>,
-      <stencil-router>
-        <stencil-route url="/" component="home-page" exact={true} />
-        <stencil-route url="/page-1" component="page-1" />
-        <stencil-route url="/page-2" component="page-2" />
+      <stencil-router id="router">
+        <stencil-route url="/"  router="#router" component="home-page" exact={true} />
+        <stencil-route url="/about" router="#router" component="about-page" />
+        <stencil-route url="/contact" router="#router" component="contact-page" />
       </stencil-router>
     ];
   }

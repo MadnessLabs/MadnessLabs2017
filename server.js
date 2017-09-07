@@ -1,28 +1,30 @@
-const express = require('express');
-const { join } = require('path');
-const { createRenderer } = require('@stencil/core');
-const { readFile } = require('fs');
+var express = require('express');
+var app = express();
+var fs = require('fs');
+var path = require('path');
 
-const app = express();
-const port = 3030;
+var stencil = require('@stencil/core');
 
-const renderer = createRenderer({
-  rootDir: join(__dirname, './'),
-  buildDir: join(__dirname, './www/build/'),
+// Create the stencil SSR renderer
+var renderer = stencil.createRenderer({
+  rootDir: path.join(__dirname, './'),
+  buildDir: path.join(__dirname, './www/build/'),
   namespace: 'app',
   logLevel: 'debug'
 });
 
+// host the build directory as static files
+// so the app can pull client side scripts
 app.use('/build', express.static('www/build'));
 
-app.get('/*', (req, res) => {
-
+// If you want to use HTML5 style routing in your client, keep the catch-all route handler here,
+// otherwise change it to a more specific route
+app.get('/*', function (req, res, next) {
   console.log(`serve: ${req.url}`);
 
-  const filePath = join(__dirname, 'www/index.html');
+  var filePath = path.join(__dirname, 'www/index.html');
 
-  readFile(filePath, 'utf-8', (err, html) => {
-
+  fs.readFile(filePath, 'utf-8', (err, html) => {
     if (err) {
       console.error(err);
       res.send(err);
@@ -31,14 +33,19 @@ app.get('/*', (req, res) => {
 
     // Render the initial app content through Stencil
     renderer.hydrateToString({
-      html,
-      req,
+      html: html,
+      req: req,
       config: {}
-    }).then(results => {
-      res.send(results.html);
-    })
+    }, function(err, html) {
+      if (err) {
+        // Handle the error hydrating
+        console.error(err);
+        return res.sendStatus(500);
+      }
+
+      // Send the hydrated data back
+      res.send(html);
+    });
   });
 
 });
-
-app.listen(port, () => console.log(`Server started at http://localhost:${ port }`));

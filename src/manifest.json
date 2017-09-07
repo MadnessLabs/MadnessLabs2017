@@ -1,0 +1,13 @@
+{
+  "name": "Madness Labs",
+  "short_name": "ML",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [{
+    "src": "img/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#5cb85c",
+  "theme_color": "#5cb85c"
+}

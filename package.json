@@ -1,24 +1,34 @@
 {
-  "name": "stencil-starter-ssr",
-  "version": "0.0.1",
+  "name": "madnesslabs",
   "private": true,
-  "main": "server.js",
-  "description": "Stencil starter with server-side rendering",
+  "version": "0.0.1",
+  "description": "The new PWA for Madness Labs",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
-    "prestart:ssr": "stencil build --dev",
-    "start:ssr": "sd concurrent \"stencil build --dev --watch\" \"node server.js\""
+    "ssr": "node server.js"
   },
   "dependencies": {
-    "@stencil/core": "0.0.5-10",
-    "@stencil/router": "0.0.7-5",
-    "express": "^4.15.4"
+    "@stencil/core": "next",
+    "@stencil/router": "0.0.4"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/stencil-starter.git"
+  },
+  "author": "Madness Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madnesslabs/madnesslabs2017/issues"
+  },
+  "homepage": "https://madnesslabs.net"
 }

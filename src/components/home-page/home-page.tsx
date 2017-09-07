@@ -1,7 +1,8 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'home-page'
+  tag: 'home-page',
+  styleUrl: 'home-page.scss'
 })
 export class HomePage {
   render() {
