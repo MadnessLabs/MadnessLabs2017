@@ -1,0 +1,9 @@
+/*! Built with http://stenciljs.com */
+my-app nav.page-nav stencil-route-link a {
+  display: inline-block;
+  padding: 10px 5px;
+}
+
+my-app.💎 {
+  visibility: inherit;
+}

@@ -1,0 +1,62 @@
+{
+  "namespace": "App",
+  "components": [
+    [
+      "ABOUT-PAGE",
+      "about-page",
+      {
+        "$": "about-page"
+      }
+    ],
+    [
+      "CONTACT-PAGE",
+      "about-page",
+      {
+        "$": "about-page"
+      }
+    ],
+    [
+      "HOME-PAGE",
+      "about-page",
+      {
+        "$": "about-page"
+      }
+    ],
+    [
+      "MY-APP",
+      "my-app",
+      {
+        "$": "my-app"
+      }
+    ],
+    [
+      "STENCIL-ROUTE",
+      "stencil-route",
+      {}
+    ],
+    [
+      "STENCIL-ROUTE-LINK",
+      "stencil-route",
+      {},
+      0,
+      0,
+      1
+    ],
+    [
+      "STENCIL-ROUTER",
+      "stencil-route",
+      {},
+      0,
+      0,
+      1
+    ],
+    [
+      "STENCIL-ROUTER-REDIRECT",
+      "stencil-route",
+      {}
+    ]
+  ],
+  "loader": "app.js",
+  "core": "app/app.core.js",
+  "corePolyfilled": "app/app.core.pf.js"
+}
