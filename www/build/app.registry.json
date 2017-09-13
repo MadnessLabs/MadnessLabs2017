@@ -23,10 +23,27 @@
       }
     ],
     [
-      "MY-APP",
-      "my-app",
+      "MADNESS-LABS-LOGO",
+      "madness-labs-logo",
       {
-        "$": "my-app"
+        "$": "madness-labs-logo"
+      },
+      [
+        [
+          "lColor",
+          1
+        ],
+        [
+          "mColor",
+          1
+        ]
+      ]
+    ],
+    [
+      "MY-APP",
+      "madness-labs-logo",
+      {
+        "$": "madness-labs-logo"
       }
     ],
     [

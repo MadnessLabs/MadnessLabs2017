@@ -18,4 +18,4 @@
     x = document.createElement('script');
     x.src = window.customElements && window.fetch ? appCore : appCorePolyfilled;
     document.head.appendChild(x);
-})(window, document, "App","/build/app/app.core.js","/build/app/app.core.pf.js",[["ABOUT-PAGE","about-page",{"$":"about-page"}],["CONTACT-PAGE","about-page",{"$":"about-page"}],["HOME-PAGE","about-page",{"$":"about-page"}],["MY-APP","my-app",{"$":"my-app"}],["STENCIL-ROUTE","stencil-route",{}],["STENCIL-ROUTE-LINK","stencil-route",{},0,0,1],["STENCIL-ROUTER","stencil-route",{},0,0,1],["STENCIL-ROUTER-REDIRECT","stencil-route",{}]]);
+})(window, document, "App","/build/app/app.core.js","/build/app/app.core.pf.js",[["ABOUT-PAGE","about-page",{"$":"about-page"}],["CONTACT-PAGE","about-page",{"$":"about-page"}],["HOME-PAGE","about-page",{"$":"about-page"}],["MADNESS-LABS-LOGO","madness-labs-logo",{"$":"madness-labs-logo"},[["lColor",1],["mColor",1]]],["MY-APP","madness-labs-logo",{"$":"madness-labs-logo"}],["STENCIL-ROUTE","stencil-route",{}],["STENCIL-ROUTE-LINK","stencil-route",{},0,0,1],["STENCIL-ROUTER","stencil-route",{},0,0,1],["STENCIL-ROUTER-REDIRECT","stencil-route",{}]]);

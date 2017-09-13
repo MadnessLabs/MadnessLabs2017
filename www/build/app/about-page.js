@@ -28,7 +28,8 @@ var HomePage = /** @class */ (function () {
     function HomePage() {
     }
     HomePage.prototype.render = function () {
-        return h("h2", 0, t("I'm the home page"));
+        return h("h2", 0, t("I'm the home page"),
+            h("madness-labs-logo", 0));
     };
     return HomePage;
 }());

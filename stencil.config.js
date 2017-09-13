@@ -1,6 +1,6 @@
 exports.config = {
   bundles: [
-    { components: ['my-app'] },
+    { components: ['my-app', 'madness-labs-logo'] },
     { components: ['home-page', 'about-page', 'contact-page'] }
   ],
   collections: [
