@@ -29,7 +29,7 @@ var HomePage = /** @class */ (function () {
     }
     HomePage.prototype.render = function () {
         return h("h2", 0, t("I'm the home page"),
-            h("madness-labs-logo", 0));
+            h("madness-labs-logo", { "a": { "l-color": 'red', "m-color": 'pink' } }));
     };
     return HomePage;
 }());

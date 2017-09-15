@@ -6,6 +6,6 @@ import { Component } from '@stencil/core';
 })
 export class HomePage {
   render() {
-    return <h2>I'm the home page<madness-labs-logo></madness-labs-logo></h2>;
+    return <h2>I'm the home page<madness-labs-logo l-color='red' m-color='pink'></madness-labs-logo></h2>;
   }
 }
