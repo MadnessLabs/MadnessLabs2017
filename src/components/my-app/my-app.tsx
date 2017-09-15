@@ -11,11 +11,7 @@ export class MyApp {
         <h1>Welcome to Stencil Starter</h1>
         <ion-card>wee</ion-card>
       </div>,
-      <nav class="page-nav">
-        <stencil-route-link router="#router" url="/">Home</stencil-route-link>
-        <stencil-route-link router="#router" url="/about">About Us</stencil-route-link>
-        <stencil-route-link router="#router" url="/contact">Contact</stencil-route-link>
-      </nav>,
+      <madness-nav></madness-nav>,
       <stencil-router id="router">
         <stencil-route url="/"  router="#router" component="home-page" exact={true} />
         <stencil-route url="/about" router="#router" component="about-page" />
