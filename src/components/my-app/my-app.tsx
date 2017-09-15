@@ -9,6 +9,7 @@ export class MyApp {
     return [
       <div class="page-header">
         <h1>Welcome to Stencil Starter</h1>
+        <ion-card>wee</ion-card>
       </div>,
       <nav class="page-nav">
         <stencil-route-link router="#router" url="/">Home</stencil-route-link>
