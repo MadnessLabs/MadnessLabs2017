@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'madness-nav',
