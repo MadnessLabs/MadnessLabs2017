@@ -8,7 +8,7 @@ export class MyApp {
   render() {
     return [
       <div class="page-header">
-        <h1>Welcome to Stencil Starter</h1>
+        <h1>Welcome to Stencil Starters</h1>
         <madness-labs-logo></madness-labs-logo>
       </div>,
       <madness-nav></madness-nav>,
