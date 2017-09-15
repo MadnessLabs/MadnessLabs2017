@@ -34,9 +34,19 @@ var HomePage = /** @class */ (function () {
     return HomePage;
 }());
 
+var VrViewer = /** @class */ (function () {
+    function VrViewer() {
+    }
+    VrViewer.prototype.render = function () {
+        return (h("iframe", { "a": { "width": "100%", "height": "300px", "allow-fullscreen": "allowfullscreen", "frame-border": "0" }, "p": { "src": this.src } }));
+    };
+    return VrViewer;
+}());
+
 exports['ABOUT-PAGE'] = AboutPage;
 exports['CONTACT-PAGE'] = ContactPage;
 exports['HOME-PAGE'] = HomePage;
+exports['VR-VIEWER'] = VrViewer;
 },
 
 
@@ -75,6 +85,21 @@ exports['HOME-PAGE'] = HomePage;
 0 /* no members */,
 
 /** home-page: host **/
+{}
+
+],
+
+/***************** vr-viewer *****************/
+[
+/** vr-viewer: tag **/
+"VR-VIEWER",
+
+/** vr-viewer: members **/
+[
+  [ "src", /** prop **/ 1 ]
+],
+
+/** vr-viewer: host **/
 {}
 
 ]
